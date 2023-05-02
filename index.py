@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from IPython.display import Image
 
 cap = cv2.VideoCapture(0)   # capture video '0' one cam
-hand_detector = mp.solutions.hands.Hands()  # detect hand
+hand_detector = mp.solutions.hands.Hands(max_num_hands=1)  # detect hand
 drawing_utils = mp.solutions.drawing_utils
 screen_width, screen_height = pyautogui.size()
 index_y = 0
